@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUA - Contacto</title>
+    <meta name="description" content="Ponte en contacto con el equipo de NUA. Estamos aquí para resolver tus dudas.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="site-header__logo" aria-label="NUA Home">Logo</a>
+            <div class="site-header__navigation">
+                <nav class="main-nav" aria-label="Navegación principal">
+                    <ul class="main-nav__list">
+                        <li><a href="index.html" class="main-nav__link">Inicio</a></li>
+                        <li><a href="library.html" class="main-nav__link">Biblioteca</a></li>
+                        <li><a href="calendar.html" class="main-nav__link">Calendario</a></li>
+                        <li><a href="contact.html" class="main-nav__link main-nav__link--active">Contacto</a></li>
+                        <li><a href="about.html" class="main-nav__link">Acerca de</a></li>
+                    </ul>
+                </nav>
+                <div class="site-header__separator" aria-hidden="true"></div>
+                <div class="site-header__actions">
+                    <a href="#" class="btn btn--secondary">Regístrate</a>
+                    <a href="#" class="btn btn--primary">Iniciar sesión</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-section container">
+            <h1>Contáctanos</h1>
+            <p>¿Tienes alguna duda o sugerencia? Completa el formulario y te responderemos a la brevedad.</p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__main">
+                <div class="site-footer__logo">Logo</div>
+                <p class="site-footer__description">Tu espacio seguro para aprender, cuidarte y decidir con libertad.</p>
+                <div class="site-footer__socials">
+                    <a href="#" aria-label="Visita nuestro Facebook">FB</a>
+                    <a href="#" aria-label="Visita nuestro Instagram">IG</a>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <p class="site-footer__copyright">&copy;2025 NUA. Todos los derechos reservados.</p>
+                <nav class="footer-nav" aria-label="Navegación legal">
+                    <ul class="footer-nav__list">
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <button class="chat-widget" type="button" aria-label="Abrir chat de ayuda">
+        <span aria-hidden="true">💬</span>
+    </button>
+    
+</body>
+</html>

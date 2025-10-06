@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUA - Calendario</title>
+    <meta name="description" content="Lleva un registro de tu ciclo menstrual, citas médicas y medicación con el calendario de NUA.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="site-header__logo" aria-label="NUA Home">Logo</a>
+            <div class="site-header__navigation">
+                <nav class="main-nav" aria-label="Navegación principal">
+                    <ul class="main-nav__list">
+                        <li><a href="index.html" class="main-nav__link">Inicio</a></li>
+                        <li><a href="library.html" class="main-nav__link">Biblioteca</a></li>
+                        <li><a href="calendar.html" class="main-nav__link main-nav__link--active">Calendario</a></li>
+                        <li><a href="contact.html" class="main-nav__link">Contacto</a></li>
+                        <li><a href="about.html" class="main-nav__link">Acerca de</a></li>
+                    </ul>
+                </nav>
+                <div class="site-header__separator" aria-hidden="true"></div>
+                <div class="site-header__actions">
+                    <a href="#" class="btn btn--secondary">Regístrate</a>
+                    <a href="#" class="btn btn--primary">Iniciar sesión</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="calendar-container container">
+            <header class="calendar-header">
+                <div class="calendar-header__nav">
+                    <h1 class="calendar-header__title">Septiembre 2025</h1>
+                    <button aria-label="Mes anterior">&lt;</button>
+                    <button aria-label="Mes siguiente">&gt;</button>
+                </div>
+                <a href="#" class="btn btn--primary">+ Agregar registro</a>
+            </header>
+
+            <div class="calendar-grid">
+                <div class="calendar-grid__cell calendar-grid__day-header">Dom</div>
+                <div class="calendar-grid__cell calendar-grid__day-header">Lun</div>
+                <div class="calendar-grid__cell calendar-grid__day-header">Mar</div>
+                <div class="calendar-grid__cell calendar-grid__day-header">Mié</div>
+                <div class="calendar-grid__cell calendar-grid__day-header">Jue</div>
+                <div class="calendar-grid__cell calendar-grid__day-header">Vie</div>
+                <div class="calendar-grid__cell calendar-grid__day-header">Sáb</div>
+
+                <div class="calendar-grid__cell calendar-grid__cell--other-month"><span class="calendar-grid__day-number">29</span></div>
+                <div class="calendar-grid__cell calendar-grid__cell--other-month"><span class="calendar-grid__day-number">30</span></div>
+                <div class="calendar-grid__cell calendar-grid__cell--other-month"><span class="calendar-grid__day-number">31</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">1</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">2</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">3</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">4</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">5</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">6</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">7</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">8</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">9</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">10</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">11</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">12</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">13</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">14</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">15</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">16</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">17</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">18</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">19</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">20</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">21</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">22</span></div>
+                <div class="calendar-grid__cell calendar-grid__cell--today"><span class="calendar-grid__day-number">23</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">24</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">25</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">26</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">27</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">28</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">29</span></div>
+                <div class="calendar-grid__cell"><span class="calendar-grid__day-number">30</span></div>
+                <div class="calendar-grid__cell calendar-grid__cell--other-month"><span class="calendar-grid__day-number">1</span></div>
+            </div>
+            <div class="calendar-legend">
+                <div class="calendar-legend__item">
+                    <span class="calendar-legend__dot calendar-legend__dot--period"></span> Periodo menstrual
+                </div>
+                <div class="calendar-legend__item">
+                    <span class="calendar-legend__dot calendar-legend__dot--appointment"></span> Cita médica
+                </div>
+                 <div class="calendar-legend__item">
+                    <span class="calendar-legend__dot calendar-legend__dot--medication"></span> Medicación
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__main">
+                <div class="site-footer__logo">Logo</div>
+                <p class="site-footer__description">Tu espacio seguro para aprender, cuidarte y decidir con libertad.</p>
+                <div class="site-footer__socials">
+                    <a href="#" aria-label="Visita nuestro Facebook">FB</a>
+                    <a href="#" aria-label="Visita nuestro Instagram">IG</a>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <p class="site-footer__copyright">&copy;2025 NUA. Todos los derechos reservados.</p>
+                <nav class="footer-nav" aria-label="Navegación legal">
+                    <ul class="footer-nav__list">
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <button class="chat-widget" type="button" aria-label="Abrir chat de ayuda">
+        <span aria-hidden="true">💬</span>
+    </button>
+    
+</body>
+</html>

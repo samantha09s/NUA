@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NUA - Biblioteca</title>
+  <meta name="description" content="Explora artículos y recursos sobre salud sexual, bienestar y derechos en nuestra biblioteca.">
+
+  <!-- Bootstrap CSS: Framework base -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  >
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,800;1,400&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body class="bg-library">
+  <!-- Header principal -->
+  <header class="site-header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <a href="index.html" class="site-header__logo">NUA</a>
+
+        <nav class="site-header__nav d-none d-lg-block" aria-label="Navegación principal">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="library.html" class="active">Biblioteca</a></li>
+            <li><a href="#">Calendario</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Acerca de</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <a href="#" class="link">Regístrate</a>
+          <a href="#" class="btn btn--primary">Iniciar sesión</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="container py-5">
+    <header class="library-header d-flex justify-content-between align-items-center mb-5">
+      <!-- Barra de búsqueda -->
+      <div class="search-bar">
+        <div class="input-group">
+          <span class="input-group-text">
+            <!-- Ícono de búsqueda -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+
+          <input type="search" class="form-control" placeholder="Buscar" aria-label="Buscar en la biblioteca">
+
+          <span class="input-group-text">
+            <!-- Ícono de micrófono -->
+            <svg width="12" height="18" viewBox="0 0 12 18" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.06494 11.7227C7.7168 11.7227 8.8291 10.4858 8.8291 8.71777V3.16455C8.8291 1.38818 7.7168 0.159668 6.06494 0.159668C4.40479 0.159668 3.29248 1.38818 3.29248 3.16455V8.71777C3.29248 10.4858 4.40479 11.7227 6.06494 11.7227ZM0.121582 8.85059C0.121582 12.1045 2.27148 14.3872 5.43408 14.6528V16.5869H2.35449C2.00586 16.5869 1.72363 16.8691 1.72363 17.2178C1.72363 17.5664 2.00586 17.8403 2.35449 17.8403H9.76709C10.1157 17.8403 10.3979 17.5664 10.3979 17.2178C10.3979 16.8691 10.1157 16.5869 9.76709 16.5869H6.6875V14.6528C9.8584 14.3872 12 12.1045 12 8.85059V7.16553C12 6.81689 11.7261 6.54297 11.3774 6.54297C11.0288 6.54297 10.7466 6.81689 10.7466 7.16553V8.80078C10.7466 11.6313 8.90381 13.5073 6.06494 13.5073C3.21777 13.5073 1.375 11.6313 1.375 8.80078V7.16553C1.375 6.81689 1.10107 6.54297 0.744141 6.54297C0.395508 6.54297 0.121582 6.81689 0.121582 7.16553V8.85059Z"
+                    fill="#0F0F10" fill-opacity="0.6"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <!-- Filtros de categoría -->
+      <nav class="filter-nav d-none d-lg-block">
+        <ul class="d-flex gap-4">
+          <li><a href="#" class="active">Tendencias</a></li>
+          <li><a href="#">Salud Sexual</a></li>
+          <li><a href="#">Bienestar</a></li>
+          <li><a href="#">Derechos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Sección de artículos -->
+    <section class="articles-section">
+      <h2 class="section-title mb-4">Para ti</h2>
+
+      <div class="row gx-5">
+        <!-- Artículo 1 -->
+        <div class="col-lg-6 mb-4">
+          <div class="article-card card">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <img src="../assets/image/olimpia-coral.jpg" class="article-card__image"
+                     alt="Olimpia Coral, la activista de México.">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body d-flex flex-column h-100">
+                  <h3 class="article-card__title">
+                    Olimpia Coral: Peligros de la IA en la violencia digital
+                  </h3>
+                  <p class="card-text article-card__description">
+                    La creadora de la Ley Olimpia advierte sobre el impacto de la IA en los derechos de mujeres.
+                  </p>
+                  <p class="article-card__author mt-auto">Verónica García de León</p>
+                  <div class="article-card__footer d-flex justify-content-between align-items-center mt-3">
+                    <div class="rating d-flex align-items-center">
+                      <svg class="rating-star" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.5 0L10.415 5.875L17 6.875L12.75 11L13.7812 17L8.5 13.8125L3.21875 17L4.25 11L0 6.875L6.585 5.875L8.5 0Z"
+                              fill="#2F5232"/>
+                      </svg>
+                      <span>4.9</span>
+                    </div>
+                    <a href="#" class="btn btn--secondary">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artículo 2 -->
+        <div class="col-lg-6 mb-4">
+          <div class="article-card card">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <img src="../assets/image/eva-gallegos.webp" class="article-card__image"
+                     alt="Eva Ramón Gallegos, investigadora mexicana.">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body d-flex flex-column h-100">
+                  <h3 class="article-card__title">
+                    Mexicana logra eliminar el Virus del Papiloma Humano
+                  </h3>
+                  <p class="card-text article-card__description">
+                    Una investigadora oaxaqueña revoluciona el tratamiento del VPH con biotecnología molecular.
+                  </p>
+                  <p class="article-card__author mt-auto">Alina Velázquez</p>
+                  <div class="article-card__footer d-flex justify-content-between align-items-center mt-3">
+                    <div class="rating d-flex align-items-center">
+                      <svg class="rating-star" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.5 0L10.415 5.875L17 6.875L12.75 11L13.7812 17L8.5 13.8125L3.21875 17L4.25 11L0 6.875L6.585 5.875L8.5 0Z"
+                              fill="#2F5232"/>
+                      </svg>
+                      <span>4.5</span>
+                    </div>
+                    <a href="#" class="btn btn--secondary">Ver más</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles de carrusel -->
+      <div class="carousel-controls d-flex justify-content-end gap-3 mt-4">
+        <button class="btn-arrow" aria-label="Artículo anterior">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6"
+                  stroke="white" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="btn-arrow" aria-label="Siguiente artículo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6"
+                  stroke="white" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bootstrap -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous">
+  </script>
+  
+ <!-- JS -->
+  <script 
+    src="../assets/js/main.js">
+  </script>
+
+</body>
+</html>
