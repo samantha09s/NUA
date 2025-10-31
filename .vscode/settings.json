@@ -1,0 +1,43 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/assets/css",
+            "savePathReplacementPairs": null
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/assets/css",
+            "savePathReplacementPairs": null
+        }
+    ],
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ],
+    "liveSassCompile.settings.showOutputWindowOn": "Error",
+    "files.associations": {
+        "*.scss": "scss"
+    },
+    "editor.formatOnSave": true,
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

@@ -1,0 +1,9 @@
+@import '../abstracts/variables';
+
+.container {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $spacing-sm;
+  padding-right: $spacing-sm;
+}

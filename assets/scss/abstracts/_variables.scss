@@ -1,0 +1,57 @@
+$bp-xs: 320px;
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$bp-xxl: 1400px;
+
+$color-primary: #10422B;
+$color-primary-hover: #0D3522;
+$color-primary-active: #0A2818;
+$color-secondary: #C42063;
+$color-secondary-hover: #A11A52;
+$color-text-dark: #1A1A1D;
+$color-text-light: #FCF9FA;
+$color-text-muted: #2D2D32;
+$color-bg-base: #F8F9FA;
+$color-bg-library: #FDF8FA;
+$color-bg-pink-light: #F9E8EF;
+$color-bg-green-light: #E2E8E5;
+$color-danger: #E51D2E;
+$color-success: #00913F;
+$color-period: #780606;
+$color-appointment: #1D59D6;
+$color-medication: #FFDF00;
+$color-event-border: #EDBCD0;
+$color-filter-base: #DBE2DF;
+$color-filter-hover: #C8D4CF;
+$color-day-past: #E2E8E5;
+$color-border-subtle: rgba(26, 26, 29, 0.08);
+
+$shadow-sm: 0 2px 8px rgba(26, 26, 29, 0.08);
+$shadow-md: 0 4px 16px rgba(26, 26, 29, 0.12);
+$shadow-lg: 0 12px 28px rgba(26, 26, 29, 0.08);
+
+$font-family-base: 'Poppins', sans-serif;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2.5rem;
+$spacing-xl: 4rem;
+
+$transition-base: 0.2s ease;
+$transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+$header-height: 88px;
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 14px;
+$radius-xl: 20px;
+$radius-pill: 50px;

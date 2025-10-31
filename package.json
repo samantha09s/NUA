@@ -1,0 +1,33 @@
+{
+  "name": "nua-platform",
+  "version": "2.0.0",
+  "description": "Plataforma de educación sexual integral",
+  "main": "index.html",
+  "scripts": {
+    "sass:dev": "sass --watch assets/scss/main.scss:assets/css/styles.css --style=expanded --source-map",
+    "sass:build": "sass assets/scss/main.scss:assets/css/styles.css --style=compressed --source-map",
+    "start": "npm run sass:dev",
+    "build": "npm run sass:build"
+  },
+  "keywords": [
+    "salud-femenina",
+    "calendario-menstrual",
+    "educacion-sexual",
+    "scss",
+    "bootstrap"
+  ],
+  "author": "Equipo NUA",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samantha09s/NUA"
+  },
+  "bugs": {
+    "url": "https://github.com/samantha09s/NUA"
+  },
+  "homepage": "https://github.com/samantha09s/NUA"
+}
