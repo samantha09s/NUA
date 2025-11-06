@@ -1,0 +1,113 @@
+@import '../abstracts/variables';
+
+@keyframes fadeInBadge {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatBadge {
+  0%, 100% {
+    transform: translateY(0px);
+    box-shadow: 0 4px 20px $color-primary-opacity-15, 0 2px 8px $color-text-dark-opacity-08;
+  }
+  50% {
+    transform: translateY(-16px);
+    box-shadow: 0 8px 28px $color-primary-opacity-22, 0 4px 12px $color-text-dark-opacity-12;
+  }
+}
+
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDescription {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInCTA {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cardPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1.15);
+    box-shadow: 0 8px 20px $color-primary-opacity-30;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.22);
+    box-shadow: 0 12px 28px $color-primary-opacity-40;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.15);
+    box-shadow: 0 8px 20px $color-primary-opacity-30;
+  }
+}
+
+@keyframes floatAvatar {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

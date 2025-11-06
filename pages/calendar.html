@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario Menstrual | Seguimiento de Ciclo</title>
+  <meta name="description" content="Calendario menstrual inteligente: seguimiento de tu ciclo, fases y eventos personalizados. Predicciones precisas y tips adaptados a cada fase.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nua-oficial.netlify.app/pages/calendar.html">
+  <meta property="og:title" content="Calendario Menstrual | Seguimiento de Ciclo">
+  <meta property="og:description" content="Calendario menstrual inteligente: seguimiento de tu ciclo, fases y eventos personalizados. Predicciones precisas y tips adaptados a cada fase.">
+  <meta property="og:image" content="https://nua-oficial.netlify.app/assets/image/fondo-nua.png">
+  
+  <!-- X -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://nua-oficial.netlify.app/pages/calendar.html">
+  <meta property="twitter:title" content="Calendario Menstrual | Seguimiento de Ciclo">
+  <meta property="twitter:description" content="Calendario menstrual inteligente: seguimiento de tu ciclo, fases y eventos personalizados. Predicciones precisas y tips adaptados a cada fase.">
+  <meta property="twitter:image" content="https://nua-oficial.netlify.app/assets/image/fondo-nua.png">
+  
+  <link rel="canonical" href="https://nua-oficial.netlify.app/pages/calendar.html">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/image/icon_nua.png">
+  <link rel="shortcut icon" type="image/png" href="../assets/image/icon_nua.png">
+  
+  <!-- Optimización de recursos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-library">
+  <!-- Encabezado -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="site-header__container">
+        <a href="../index.html" class="site-header__logo" aria-label="NUA - Inicio">NUA</a>
+
+        <nav class="site-header__nav" aria-label="Navegación principal">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="library.html">Biblioteca</a></li>
+            <li><a href="calendar.html" aria-current="page">Calendario</a></li>
+            <li><a href="about.html">Acerca de</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <a href="#" class="link-simple" data-bs-toggle="offcanvas" data-bs-target="#registroOffcanvas" aria-label="Abrir registro">Regístrate</a>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" aria-label="Iniciar sesión">Iniciar sesión</button>
+        </div>
+
+        <button class="btn-mobile-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-label="Menú de navegación">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sección principal -->
+  <main class="calendar-page" id="main-content">
+    <div class="container py-5">
+      <h1 class="visually-hidden">Calendario</h1>
+      <div class="calendar-layout">
+        
+        <!-- Calendario interactivo -->
+        <section class="calendar-section" aria-label="Calendario menstrual interactivo">
+          <!-- Encabezado -->
+          <div class="calendar-header">
+            <div class="calendar-header-left">
+              <h2 class="calendar-month" id="calendarMonth">Octubre 2025</h2>
+              <div class="calendar-nav">
+                <button class="btn-nav" id="prevMonth" aria-label="Mes anterior">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="btn-nav" id="nextMonth" aria-label="Mes siguiente">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="calendar-header-right">
+              <button class="btn-add-event" data-bs-toggle="modal" data-bs-target="#eventModal" aria-label="Agregar registro">
+                <i class="bi bi-plus-circle me-2"></i>Agregar registro
+              </button>
+              <button class="btn-config-icon" id="btnConfig" aria-label="Configurar ciclo menstrual">
+                <i class="bi bi-gear"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cuadrícula del calendario -->
+          <div class="calendar-grid">
+            <div class="weekday-header">Dom</div>
+            <div class="weekday-header">Lun</div>
+            <div class="weekday-header">Mar</div>
+            <div class="weekday-header">Mié</div>
+            <div class="weekday-header">Jue</div>
+            <div class="weekday-header">Vie</div>
+            <div class="weekday-header">Sáb</div>
+            <div id="calendarDays" role="grid"></div>
+          </div>
+
+        </section>
+
+        <!-- Barra lateral -->
+        <aside class="calendar-sidebar" aria-label="Fase actual y próximos eventos">
+          <!-- Tarjeta de fase -->
+          <div class="phase-today" id="phaseToday">
+            <div class="phase-badge" id="phaseBadge"></div>
+            <div class="phase-info">
+              <p class="phase-name" id="phaseName">FASE</p>
+              <p class="phase-tip" id="phaseTip">Cargando información de tu ciclo...</p>
+              <p class="phase-day" id="phaseDay">Día - de tu ciclo</p>
+            </div>
+          </div>
+
+          <!-- Próximo período -->
+          <div class="next-period-card">
+            <p class="card-label">Próximo período</p>
+            <p class="next-period-date" id="nextPeriodDate">- -</p>
+            <p class="next-period-text" id="nextPeriodText">Configura tu ciclo para ver predicciones</p>
+          </div>
+
+          <!-- Progreso del ciclo -->
+          <div class="cycle-progress">
+            <p class="card-label" id="progressLabel">Día - de -</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <!-- Próximos eventos -->
+          <div class="upcoming-events">
+            <p class="card-label">Próximos registros</p>
+            <div id="eventsList" class="events-list" role="region" aria-label="Próximos eventos">
+              <div class="empty-state">
+                <i class="bi bi-calendar-check" aria-hidden="true"></i>
+                <p>Sin registros próximos</p>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal: Configurar ciclo -->
+  <div class="modal fade" id="cycleModal" tabindex="-1" aria-labelledby="cycleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="cycleModalLabel">Ciclo menstrual</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar modal"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted mb-4">Cuéntanos sobre tu ciclo para recibir predicciones personalizadas y tips adaptados a cada fase.</p>
+          
+          <form id="cycleForm" novalidate>
+            <div class="mb-3">
+              <label for="lastPeriodDate" class="form-label">Primer día de tu última menstruación</label>
+              <input type="date" class="form-control" id="lastPeriodDate" required>
+              <div class="invalid-feedback">Ingresa una fecha válida.</div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="cycleLength" class="form-label">Duración promedio de tu ciclo</label>
+              <input type="number" class="form-control" id="cycleLength" value="28" min="21" max="35" required>
+              <small class="form-text text-muted">Entre 21 y 35 días (por defecto 28).</small>
+              <div class="invalid-feedback">Número entre 21 y 35.</div>
+            </div>
+            
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Continuar</button>
+            </div>
+          </form>
+          
+          <div id="cycleSuccess" class="alert alert-success mt-3" role="alert" style="display: none;">
+            <i class="bi bi-check-circle me-2"></i>Ciclo actualizado
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Agregar evento -->
+  <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="eventModalLabel">Agregar registro</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="eventForm" novalidate>
+            <div class="mb-3">
+              <label for="eventType" class="form-label">Tipo de registro</label>
+              <select class="form-select" id="eventType" required>
+                <option value="" selected disabled>Selecciona tipo</option>
+                <option value="appointment">Cita médica</option>
+                <option value="medication">Medicación</option>
+              </select>
+              <div class="invalid-feedback">Selecciona un tipo.</div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="eventDate" class="form-label">Fecha</label>
+              <input type="date" class="form-control" id="eventDate" required>
+              <div class="invalid-feedback">Selecciona fecha.</div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="eventTitle" class="form-label">Título</label>
+              <input type="text" class="form-control" id="eventTitle" placeholder="Ej: Consulta ginecóloga" required>
+              <div class="invalid-feedback">Ingresa un título.</div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="eventDescription" class="form-label">Notas (opcional)</label>
+              <textarea class="form-control" id="eventDescription" rows="2" placeholder="Agrega detalles si lo deseas"></textarea>
+            </div>
+            
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Guardar registro</button>
+            </div>
+          </form>
+          
+          <div id="eventSuccess" class="alert alert-success mt-3" role="alert" style="display: none;">
+            <i class="bi bi-check-circle me-2"></i>Registro guardado
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Login -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="loginModalLabel">Iniciar sesión</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm" novalidate>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="loginEmail" name="email" required autocomplete="email" aria-describedby="loginEmailHelp">
+              <div id="loginEmailHelp" class="form-text">Tu correo no será compartido.</div>
+              <div class="invalid-feedback">Correo válido requerido.</div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="loginPassword" name="password" required minlength="6" autocomplete="current-password">
+              <div class="invalid-feedback">Mínimo 6 caracteres.</div>
+            </div>
+            
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="loginRemember" name="remember">
+              <label class="form-check-label" for="loginRemember">Recordarme</label>
+            </div>
+            
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Continuar</button>
+            </div>
+          </form>
+          
+          <div id="loginSuccess" class="alert alert-success mt-3" role="alert" style="display: none;">
+            <i class="bi bi-check-circle me-2"></i>¡Bienvenida!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offcanvas: Crear cuenta -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="registroOffcanvas" aria-labelledby="registroOffcanvasLabel" role="dialog">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title" id="registroOffcanvasLabel">Crear cuenta</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar panel"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p class="text-muted mb-4">Accede a contenido confiable sobre tu cuerpo y bienestar.</p>
+      
+      <form id="registroForm" novalidate>
+        <div class="mb-3">
+          <label for="registroNombre" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="registroNombre" name="nombre" required minlength="3" autocomplete="name">
+          <div class="invalid-feedback">Mínimo 3 caracteres.</div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="registroEmail" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="registroEmail" name="email" required autocomplete="email">
+          <div class="invalid-feedback">Correo inválido.</div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="registroPassword" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="registroPassword" name="password" required minlength="8" autocomplete="new-password" aria-describedby="registroPasswordHelp">
+          <div id="registroPasswordHelp" class="form-text">Mínimo 8 caracteres.</div>
+          <div class="invalid-feedback">Mínimo 8 caracteres.</div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="registroPasswordConfirm" class="form-label">Confirmar contraseña</label>
+          <input type="password" class="form-control" id="registroPasswordConfirm" name="passwordConfirm" required minlength="8" autocomplete="new-password">
+          <div class="invalid-feedback">Contraseñas deben coincidir.</div>
+        </div>
+        
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="registroTerms" name="terms" required>
+          <label class="form-check-label" for="registroTerms">
+            Acepto los <a href="#" class="link-simple">términos</a>
+          </label>
+          <div class="invalid-feedback">Debes aceptar términos.</div>
+        </div>
+        
+        <div class="d-grid">
+          <button type="submit" class="btn btn-registro btn-lg">Crear cuenta</button>
+        </div>
+      </form>
+      
+      <div id="registroSuccess" class="alert alert-success mt-3" role="alert" style="display: none;">
+        <i class="bi bi-check-circle me-2"></i>¡Bienvenida!
+      </div>
+    </div>
+  </div>
+
+  <!-- Offcanvas: Navegación móvil -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel" role="navigation">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title" id="mobileNavLabel">Menú</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar menú"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav aria-label="Navegación móvil">
+        <ul class="mobile-nav-list">
+          <li><a href="../index.html" class="mobile-nav-link" data-bs-dismiss="offcanvas">Inicio</a></li>
+          <li><a href="library.html" class="mobile-nav-link" data-bs-dismiss="offcanvas">Biblioteca</a></li>
+          <li><a href="calendar.html" class="mobile-nav-link" data-bs-dismiss="offcanvas">Calendario</a></li>
+          <li><a href="about.html" class="mobile-nav-link" data-bs-dismiss="offcanvas">Acerca de</a></li>
+          <li><a href="contact.html" class="mobile-nav-link" data-bs-dismiss="offcanvas">Contacto</a></li>
+        </ul>
+      </nav>
+      
+      <hr class="my-3">
+      
+      <div class="d-grid gap-2">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar sesión</button>
+        <button type="button" class="btn btn-registro" data-bs-dismiss="offcanvas" data-bs-toggle="offcanvas" data-bs-target="#registroOffcanvas">Crear cuenta</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="site-footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="../index.html" class="footer-logo" aria-label="NUA">NUA</a>
+          <p class="footer-tagline">Un espacio donde aprender sobre tu cuerpo y sexualidad sin tabúes ni juicios.</p>
+
+          <div class="footer-social">
+            <a href="#" aria-label="Seguir en Instagram" class="social-link">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Seguir en TikTok" class="social-link">
+              <i class="bi bi-tiktok" aria-hidden="true"></i>
+            </a>
+            <a href="#" aria-label="Seguir en X" class="social-link">
+              <i class="bi bi-twitter-x" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Explora</h3>
+          <nav aria-label="Enlaces de navegación">
+            <ul class="footer-links">
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="library.html">Biblioteca</a></li>
+              <li><a href="calendar.html">Calendario</a></li>
+              <li><a href="about.html">Acerca de NUA</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Soporte</h3>
+          <nav aria-label="Enlaces de soporte">
+            <ul class="footer-links">
+              <li><a href="#faq">Preguntas frecuentes</a></li>
+              <li><a href="#privacidad">Privacidad</a></li>
+              <li><a href="#terminos">Términos</a></li>
+              <li><a href="#ayuda">Centro de ayuda</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h3 class="footer-heading">Mantente informada</h3>
+          <p class="newsletter-text">Recibe artículos, guías y recursos verificados directamente en tu correo.</p>
+          <form class="newsletter-form" id="footerNewsletterForm" novalidate>
+            <div class="newsletter-input-group">
+              <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required aria-label="Suscribirse al newsletter" name="newsletter-email">
+              <button type="submit" class="newsletter-btn" aria-label="Enviar suscripción">
+                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+            <p class="newsletter-disclaimer">Al suscribirte aceptas nuestra <a href="#privacidad">Política de Privacidad</a>.</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">© <span id="currentYear"></span> NUA. Hecho con cuidado y respeto.</p>
+        <nav class="footer-legal" aria-label="Enlaces legales">
+          <a href="#privacidad">Privacidad</a>
+          <a href="#terminos">Términos de uso</a>
+          <a href="#cookies">Cookies</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/cycle-predictor.js" defer></script>
+</body>
+</html>

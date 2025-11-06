@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samantha09s.github.io/NUA/seo/sitemap.xml
